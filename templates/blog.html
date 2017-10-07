@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for entry in entries %}
+    <h2> 
+        <a href="./blog?id={{entry.id}}">
+             {{ entry.name }}
+        </a>
+    </h2>
+    <p> 
+        <img src="https://images-na.ssl-images-amazon.com/images/I/41KLCZIQolL._SY300_.jpg">
+        <br>
+        {{ entry.content }} 
+    </p>
+    {% endfor %}
+
+    {{ qry }}
+    
+
+{% endblock %}
