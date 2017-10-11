@@ -27,13 +27,13 @@ def index():
     if qry_id == None:
         entries = Blog.query.all()
         return render_template("blog.html",
-            title="Faith's Blog",
+            title="Raven's Ranting",
             entries=entries)
 
     else:
         entries = Blog.query.filter_by(id=qry_id).all()
         return render_template("blog.html",
-            title="Faith's Blog",
+            title="Raven's Ranting",
             entries=entries)
 
 @app.route('/blogentry', methods=['POST', 'GET'])
